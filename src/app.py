@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify, Response, make_response
 import json
-from service import predict_image, initialize
+from src.service import predict_image, initialize
 
 app = Flask(__name__)
 
@@ -20,9 +20,9 @@ def main_predict():
     return jsonify(results)
 
 
-# def create_app():
-#     initialize()
-#     return app
+def create_app():
+    initialize()
+    return app
 
 
 if __name__ == '__main__':

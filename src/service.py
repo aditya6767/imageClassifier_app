@@ -1,7 +1,7 @@
 from urllib.request import urlopen
 from PIL import Image
 from PIL import ImageFile
-from model_initializer import ModelFactory
+from src.model_initializer import ModelFactory
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 initializer = None
 

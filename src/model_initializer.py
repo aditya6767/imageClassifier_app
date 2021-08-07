@@ -1,4 +1,4 @@
-from resnet import Resnet50_model
+from src.resnet import Resnet50_model
 
 
 class ModelFactory:
