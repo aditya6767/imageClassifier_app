@@ -63,33 +63,38 @@ function App() {
         uploadPic()
     }
   return (
-    <div className="App">
-    <div>
-                    <div>
-                        <span>Upload JPEG Image</span>
-                        <input type="file" onChange={(e)=>handleUploadpic(e)}/>
+    <div className="main-div">
+            <h1>Image Classifier</h1>
+            <div className="App">
+                <div className="file-field input-field">
+                    <div className="input-section">
+                        <p id="select">select image</p>
+                        <input type="file" onChange={(e) => handleUploadpic(e)} />
                     </div>
                 </div>
-                <button className="btn waves-effect waves-light .#6a1b9a purple darken-3" onClick={()=>PostData()}>
-                Upload
+                <button className="btn waves-effect waves-light .#6a1b9a purple darken-3" onClick={() => PostData()}>
+                    Predict
                 </button>
                 {
                     response ? (
-                    <div>
-                    <div>
-                    classname = {response.classname}
-                    </div>
-                     <div>
-                    probability =  {response.probability}
-                    </div>
-                    </div>
+                        <div id="results">
+                            <h3>Results</h3>
+                            <div id="classname">
+                                classname = {response.classname}
+                            </div>
+                            <div id="probab">
+                                probability =  {response.probability}
+                            </div>
+                        </div>
                     ) : loading ? (
-                                    <div>
-                                    loading....
-                                    </div>
-                                    ) : null
+                        <div>
+                            loading....
+                        </div>
+                    ) : null
                 }
-    </div>
+            </div>
+
+        </div>
   );
 }
 
