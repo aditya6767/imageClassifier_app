@@ -64,9 +64,9 @@ function App() {
     }
   return (
     <div className="App">
-    <div className="file-field input-field">
-                    <div className="">
-                        <span>Upload Pic</span>
+    <div>
+                    <div>
+                        <span>Upload JPEG Image</span>
                         <input type="file" onChange={(e)=>handleUploadpic(e)}/>
                     </div>
                 </div>
