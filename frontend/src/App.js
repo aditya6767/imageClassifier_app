@@ -68,7 +68,7 @@ function App() {
             <div className="App">
                 <div className="file-field input-field">
                     <div className="input-section">
-                        <p id="select">select image</p>
+                        <p id="select">select jpeg image</p>
                         <input type="file" onChange={(e) => handleUploadpic(e)} />
                     </div>
                 </div>
